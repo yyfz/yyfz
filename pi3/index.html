@@ -272,14 +272,49 @@
                     Robust & Efficient
                 </h2>
                 <p class="text-gray-400 mt-4 max-w-3xl mx-auto">
-                    放一些challenge的case
+                    Featuring a collection of challenging reconstruction cases.
                 </p>
             </div>
             
             <div id="point-cloud-selectors" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-7xl mx-auto">
                 </div>
-
-            <div id="point-cloud-container" class="max-w-7xl mx-auto">
+    
+            <div class="max-w-3xl mx-auto mb-8 text-gray-300">
+                <div class="flex justify-center items-start space-x-8 md:space-x-16 text-center">
+                    
+                    <div>
+                        <div class="flex justify-center items-center w-16 h-16 bg-gray-800/50 rounded-full mx-auto mb-3 border border-gray-700">
+                            <svg class="w-8 h-8 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a12.02 12.02 0 00-5.84-2.56v4.82m5.84 2.56l-4.82-5.84m4.82 5.84l-2.56 5.84M6 18.75a12.028 12.028 0 005.84-2.56m-5.84 2.56l-2.56-5.84m2.56 5.84l5.84-4.82M6 18.75v-4.82a12.02 12.02 0 015.84-2.56M6 18.75L.16 13.91a12.02 12.02 0 015.84-2.56" />
+                            </svg>
+                        </div>
+                        <p class="font-semibold">Rotate</p>
+                        <p class="text-sm text-gray-500">Hold & Drag Left Mouse</p>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-center items-center w-16 h-16 bg-gray-800/50 rounded-full mx-auto mb-3 border border-gray-700">
+                            <svg class="w-8 h-8 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                            </svg>
+                        </div>
+                        <p class="font-semibold">Pan</p>
+                        <p class="text-sm text-gray-500">Hold & Drag Right Mouse</p>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-center items-center w-16 h-16 bg-gray-800/50 rounded-full mx-auto mb-3 border border-gray-700">
+                             <svg class="w-8 h-8 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5M15 15l5.25 5.25" />
+                            </svg>
+                        </div>
+                        <p class="font-semibold">Zoom</p>
+                        <p class="text-sm text-gray-500">Use Mouse Scroll Wheel</p>
+                    </div>
+    
+                </div>
+            </div>
+            <div id="point-cloud-container" class="relative max-w-7xl mx-auto h-[60vh] rounded-lg overflow-hidden bg-black">
                 <div id="point-cloud-loader" class="loader" style="display: none;"></div>
             </div>
         </div>        
