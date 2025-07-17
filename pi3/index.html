@@ -439,7 +439,8 @@
     
     <script type="module">
         import * as THREE from 'three';
-        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
         import { PLYLoader } from 'three/addons/loaders/PLYLoader.js'; // <-- Changed to PLYLoader
 
         // --- IMPORTANT: CUSTOMIZE YOUR VIDEO AND .PLY FILE PATHS HERE ---
@@ -485,9 +486,20 @@
             renderer.setPixelRatio(window.devicePixelRatio);
             container.appendChild(renderer.domElement);
 
-            controls = new OrbitControls(camera, renderer.domElement);
-            controls.enableDamping = true;
-            controls.dampingFactor = 0.05;
+            // controls = new OrbitControls(camera, renderer.domElement);
+            // controls.enableDamping = true;
+            // controls.dampingFactor = 0.05;
+            controls = new TrackballControls(camera, renderer.domElement); // <-- 使用这行
+
+            // 配置 TrackballControls
+            controls.rotateSpeed = 2.0; // 旋转速度
+            controls.zoomSpeed = 1.2;   // 缩放速度
+            controls.panSpeed = 0.8;    // 平移速度
+            controls.noZoom = false;    // 允许缩放
+            controls.noPan = false;     // 允许平移
+            controls.staticMoving = true; // 动态阻尼
+            controls.dynamicDampingFactor = 0.3;
+            
             // controls.screenSpacePanning = false;
             controls.screenSpacePanning = true;
             controls.minDistance = 0.5;
